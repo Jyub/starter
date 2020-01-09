@@ -4,9 +4,23 @@ management:
     web:
       exposure:
         include: "*"
+    jmx:
+      exposure:
+        include: "*"
+      domain: spring.demo
   endpoint:
     health:
       show-details: always
       enabled: true
     mappings:
       enabled: true
+  info:
+    git:
+      mode: full
+spring:
+  redis:
+    host: 192.168.117.60
+info:
+  app:
+    encoding: @project.build.sourceEncoding@
+    source: @java.version@
